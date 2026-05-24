@@ -17,18 +17,19 @@ export const Sidebar = () => {
   return (
     <aside className="fixed top-0 left-0 h-screen w-64 flex flex-col border-r border-white/10 bg-black/80 backdrop-blur-md">
       <div className="px-6 py-6 border-b border-white/10">
-        <span className="text-white font-bold text-xl tracking-widest uppercase">
-          K<span className="text-gray-500">UI</span>
-        </span>
-        <p className="text-gray-600 text-xs tracking-widest uppercase mt-1">
-          Component Library
+        <Link href="/">
+          <span className="text-white font-bold text-xl tracking-widest hover:opacity-80 transition-opacity duration-200">
+            K<span className="text-gray-500">UI</span>
+          </span>
+        </Link>
+        <p className="text-gray-600 text-xs tracking-widest mt-1">
+          COMPONENT LIBRARY
         </p>
       </div>
 
-      {/* Nav */}
       <nav className="flex-1 px-4 py-6 flex flex-col gap-1">
-        <p className="text-gray-600 text-xs tracking-widest uppercase px-2 mb-3">
-          Components
+        <p className="text-gray-600 text-xs tracking-widest px-2 mb-3">
+          COMPONENTS
         </p>
 
         {components.map((component) => {
@@ -51,8 +52,8 @@ export const Sidebar = () => {
       </nav>
 
       <div className="px-6 py-4 border-t border-white/10">
-        <p className="text-gray-600 text-xs tracking-widest uppercase">
-          by Klein
+        <p className="text-gray-600 text-xs tracking-widest">
+          BY KLEIN
         </p>
       </div>
     </aside>
