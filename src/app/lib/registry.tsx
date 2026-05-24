@@ -101,18 +101,18 @@ export const registry: Record<string, ComponentEntry> = {
         </Card>
         <Card variant="elevated" hoverable className="w-72">
           <CardHeader>
-            <Badge variant="success" className="w-fit">
-              Active
-            </Badge>
             <CardTitle>Elevated Card</CardTitle>
             <CardDescription>
-              Hover over this card to see the effect.
+              Hover over this card to see the outline border effect.
             </CardDescription>
           </CardHeader>
           <CardFooter>
             <Button size="sm" variant="danger">
               Delete
             </Button>
+            <Badge variant="success" className="w-fit">
+              Active
+            </Badge>
           </CardFooter>
         </Card>
       </div>
@@ -134,13 +134,13 @@ export const registry: Record<string, ComponentEntry> = {
 </Card>
 
 // Variants
-<Card variant="default">...</Card>
-<Card variant="elevated">...</Card>
-<Card variant="outline">...</Card>
-<Card variant="ghost">...</Card>
+<Card variant="default">Card 1</Card>
+<Card variant="elevated">Card 2</Card>
+<Card variant="outline">Card 3</Card>
+<Card variant="ghost">Card 4</Card>
 
 // Hoverable
-<Card hoverable>...</Card>`,
+<Card hoverable>Card 5</Card>`,
   },
 
   input: {

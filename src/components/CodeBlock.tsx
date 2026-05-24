@@ -1,8 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import { Check, Copy } from "lucide-react";
+import { codeToHtml } from "shiki";
 import { cn } from "@/app/lib/utils";
+import { CopyButton } from "@/components/CopyButton";
 
 type CodeBlockProps = {
   code: string;
@@ -10,18 +8,15 @@ type CodeBlockProps = {
   className?: string;
 };
 
-export const CodeBlock = ({
+export const CodeBlock = async ({
   code,
   language = "tsx",
   className,
 }: CodeBlockProps) => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  const html = await codeToHtml(code, {
+    lang: language,
+    theme: "dark-plus",
+  });
 
   return (
     <div
@@ -34,27 +29,13 @@ export const CodeBlock = ({
         <span className="text-xs text-gray-600 tracking-widest uppercase">
           {language}
         </span>
-        <button
-          onClick={handleCopy}
-          className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors duration-200"
-        >
-          {copied ? (
-            <>
-              <Check size={12} className="text-green-400" />
-              <span className="text-green-400">Copied</span>
-            </>
-          ) : (
-            <>
-              <Copy size={12} />
-              <span>Copy</span>
-            </>
-          )}
-        </button>
+        <CopyButton code={code} />
       </div>
 
-      <pre className="p-4 overflow-x-auto text-sm text-gray-300 leading-relaxed">
-        <code>{code}</code>
-      </pre>
+      <div
+        className="p-4 text-sm leading-relaxed overflow-x-auto [&>pre]:bg-transparent! [&>pre]:p-0! whitespace-pre-wrap break-all"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 };
