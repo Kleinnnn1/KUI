@@ -11,6 +11,7 @@ const components = [
   { name: "Badge", slug: "badge" },
   { name: "Card", slug: "card" },
   { name: "Input", slug: "input" },
+  { name: "Toast", slug: "toast" },
 ];
 
 export const Sidebar = () => {
