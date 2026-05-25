@@ -123,7 +123,7 @@ export const Sidebar = () => {
 
         <div className="px-6 py-4 border-t border-white/10">
           <p className="text-gray-600 text-xs tracking-widests uppercase">
-            BY KLEIN
+            BY KENNETH JHUN BALINO
           </p>
         </div>
       </aside>

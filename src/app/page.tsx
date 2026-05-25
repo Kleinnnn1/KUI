@@ -162,7 +162,7 @@ export default function Home() {
             target="_blank"
             className="text-gray-400 hover:text-white transition-colors duration-200"
           >
-            KLEIN
+            KENNETH JHUN BALINO
           </Link>
         </p>
       </footer>
