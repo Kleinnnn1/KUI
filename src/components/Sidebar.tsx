@@ -12,6 +12,7 @@ const components = [
   { name: "Card", slug: "card" },
   { name: "Input", slug: "input" },
   { name: "Toast", slug: "toast" },
+  { name: "Modal", slug: "modal" },
 ];
 
 export const Sidebar = () => {
