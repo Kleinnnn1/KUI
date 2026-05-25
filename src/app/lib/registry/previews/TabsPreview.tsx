@@ -7,13 +7,13 @@ import { User, Settings, Bell } from "lucide-react";
 export const TabsPreview = () => {
   return (
     <div className="flex flex-col items-center gap-8 w-full">
-
       <div className="flex flex-col items-center gap-2 w-full">
         <p className="text-gray-600 text-xs tracking-widest uppercase">
           Default
         </p>
-        <Tabs defaultValue="overview" className="w-96">
-          <TabsList>
+        <Tabs defaultValue="overview" className="w-full">
+          {" "}
+          <TabsList className="w-full">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="details">Details</TabsTrigger>
             <TabsTrigger value="settings">Settings</TabsTrigger>
@@ -55,8 +55,9 @@ export const TabsPreview = () => {
         <p className="text-gray-600 text-xs tracking-widest uppercase">
           With Icons
         </p>
-        <Tabs defaultValue="profile" className="w-96">
-          <TabsList variant="outline">
+        <Tabs defaultValue="profile" className="w-full">
+          {" "}
+          <TabsList variant="outline" className="w-full">
             <TabsTrigger value="profile" icon={<User size={13} />}>
               Profile
             </TabsTrigger>
@@ -101,11 +102,12 @@ export const TabsPreview = () => {
       </div>
 
       <div className="flex flex-col items-center gap-2 w-full">
-        <p className="text-gray-600 text-xs tracking-widests uppercase">
+        <p className="text-gray-600 text-xs tracking-widest uppercase">
           Ghost + Disabled
         </p>
-        <Tabs defaultValue="tab1" className="w-96">
-          <TabsList variant="ghost">
+        <Tabs defaultValue="tab1" className="w-full">
+          {" "}
+          <TabsList variant="ghost" className="w-full">
             <TabsTrigger value="tab1">Tab One</TabsTrigger>
             <TabsTrigger value="tab2">Tab Two</TabsTrigger>
             <TabsTrigger value="tab3" disabled>

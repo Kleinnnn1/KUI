@@ -62,7 +62,15 @@ type TabsListProps = VariantProps<typeof tabsListVariants> & {
 };
 
 export const TabsList = ({ children, variant, className }: TabsListProps) => (
-  <div className={cn(tabsListVariants({ variant }), className)}>{children}</div>
+  <div
+    className={cn(
+      tabsListVariants({ variant }),
+      "flex w-full overflow-x-auto scrollbar-none",
+      className,
+    )}
+  >
+    {children}
+  </div>
 );
 
 type TabsTriggerProps = {
@@ -89,6 +97,7 @@ export const TabsTrigger = ({
       disabled={disabled}
       className={cn(
         tabsTriggerVariants({ state: isActive ? "active" : "inactive" }),
+        "flex-1 shrink-0 whitespace-nowrap",
         className,
       )}
     >
