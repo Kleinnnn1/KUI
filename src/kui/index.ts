@@ -5,3 +5,4 @@ export * from "./Input";
 export * from "./Toast";
 export * from "./Modal";
 export * from "./Avatar";
+export * from "./Dropdown";
