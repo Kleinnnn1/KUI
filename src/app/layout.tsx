@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "KUI — Minimal Dark React Component Library",
+  verification: {
+    google: "OPy9HJG3RVh5T7l85XYEaT3kyzlIyl04YUr4glwr0go",
+  },
   description:
     "A minimal, dark-first React component library built with TypeScript and Tailwind CSS.",
   openGraph: {
