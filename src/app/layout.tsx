@@ -14,12 +14,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s — KUI",
-    default: "KUI — Minimal Dark Component Library",
-  },
+  title: "KUI — Minimal Dark React Component Library",
   description:
-    "A minimal dark component library built with React, TypeScript, and Tailwind. Copy. Paste. Ship.",
+    "A minimal, dark-first React component library built with TypeScript and Tailwind CSS.",
+  openGraph: {
+    title: "KUI — Minimal Dark React Component Library",
+    description:
+      "A minimal, dark-first React component library built with TypeScript and Tailwind CSS.",
+    url: "https://kui-v1.vercel.app",
+    siteName: "KUI",
+    images: [
+      {
+        url: "https://kui-v1.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KUI — Minimal Dark React Component Library",
+    description:
+      "A minimal, dark-first React component library built with TypeScript and Tailwind CSS.",
+    images: ["https://kui-v1.vercel.app/og-image.png"],
+  },
   icons: {
     icon: "/kui-logo.svg",
   },
