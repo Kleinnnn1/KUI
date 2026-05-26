@@ -6,7 +6,11 @@ import { CodeBlock } from "@/components/CodeBlock";
 import { PropsTable } from "@/components/PropsTable";
 import type { Metadata } from "next";
 
-const installCode = `npm install class-variance-authority clsx tailwind-merge`;
+const installCode = `# Required
+npm install @kennbalino/kui
+
+# Optional — only if you want to use CVA, cn(), or lucide icons directly
+npm install class-variance-authority clsx tailwind-merge lucide-react`;
 
 export async function generateMetadata({
   params,

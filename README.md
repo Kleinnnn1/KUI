@@ -39,7 +39,10 @@ KUI follows the **copy-paste** pattern popularized by shadcn/ui. Browse the docs
 Install the required dependencies:
 
 ```bash
-npm install class-variance-authority clsx tailwind-merge lucide-react
+npm install @kennbalino/kui lucide-react
+
+# Optional — only if you want to use CVA, cn(), or lucide icons directly
+npm install class-variance-authority clsx tailwind-merge lucide-react`
 ```
 
 ### Setup the `cn()` utility
@@ -145,40 +148,6 @@ import { Search } from "lucide-react";
 
 // Disabled
 <Input placeholder="Disabled input" disabled />
-```
-
-## Project Structure
-
-```
-src/
-├── app/                        # Next.js app router
-│   ├── docs/
-│   │   └── [component]/
-│   │       └── page.tsx        # Dynamic docs pages
-│   ├── layout.tsx
-│   └── page.tsx                # Landing page
-│
-├── kui/                        # KUI components (copy these)
-│   ├── Button/
-│   │   ├── Button.tsx
-│   │   ├── button.variants.ts
-│   │   └── index.ts
-│   ├── Badge/
-│   ├── Card/
-│   ├── Input/
-│   └── index.ts
-│
-├── components/                 # Docs site UI
-│   ├── Sidebar.tsx
-│   ├── Navbar.tsx
-│   ├── CodeBlock.tsx
-│   ├── Preview.tsx
-│   └── icons/
-│       └── GithubIcon.tsx
-│
-└── lib/
-    ├── utils.ts                # cn() utility
-    └── registry.tsx            # Component registry for docs
 ```
 
 ## Local Development
