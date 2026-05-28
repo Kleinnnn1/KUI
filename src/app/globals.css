@@ -1,34 +1,120 @@
 @import "tailwindcss";
 @source "../../node_modules/@kennbalino/kui/dist";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    /* Background */
+    --background: 0 0% 4%;
+    --background-subtle: 0 0% 6%;
+    --background-muted: 0 0% 9%;
+
+    /* Foreground */
+    --foreground: 0 0% 100%;
+    --foreground-muted: 0 0% 60%;
+    --foreground-subtle: 0 0% 40%;
+
+    /* Border */
+    --border: 0 0% 100% / 0.1;
+    --border-strong: 0 0% 100% / 0.2;
+
+    /* Primary */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Status */
+    --success: 142 76% 36%;
+    --success-foreground: 142 76% 70%;
+    --success-muted: 142 76% 36% / 0.2;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 70%;
+    --warning-muted: 38 92% 50% / 0.2;
+
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 84% 70%;
+    --danger-muted: 0 84% 60% / 0.2;
+
+    /* Ring */
+    --ring: 0 0% 100% / 0.1;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --background-subtle: 0 0% 97%;
+    --background-muted: 0 0% 94%;
+
+    --foreground: 0 0% 4%;
+    --foreground-muted: 0 0% 40%;
+    --foreground-subtle: 0 0% 60%;
+
+    --border: 0 0% 0% / 0.1;
+    --border-strong: 0 0% 0% / 0.2;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 142 76% 30%;
+    --success-muted: 142 76% 36% / 0.15;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 35%;
+    --warning-muted: 38 92% 50% / 0.15;
+
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 84% 45%;
+    --danger-muted: 0 84% 60% / 0.15;
+
+    --ring: 0 0% 0% / 0.1;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: hsl(var(--background));
+  --color-background-subtle: hsl(var(--background-subtle));
+  --color-background-muted: hsl(var(--background-muted));
+
+  --color-foreground: hsl(var(--foreground));
+  --color-foreground-muted: hsl(var(--foreground-muted));
+  --color-foreground-subtle: hsl(var(--foreground-subtle));
+
+  --color-border: hsl(var(--border));
+  --color-border-strong: hsl(var(--border-strong));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+  --color-success-muted: hsl(var(--success-muted));
+
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+  --color-warning-muted: hsl(var(--warning-muted));
+
+  --color-danger: hsl(var(--danger));
+  --color-danger-foreground: hsl(var(--danger-foreground));
+  --color-danger-muted: hsl(var(--danger-muted));
+
+  --color-ring: hsl(var(--ring));
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-family: Arial, Helvetica, sans-serif;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
-  height: 6px; /* horizontal scrollbar */
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -36,12 +122,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(var(--border));
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: hsl(var(--border-strong));
 }
 
 ::-webkit-scrollbar-corner {
@@ -57,19 +143,31 @@ pre::-webkit-scrollbar-track {
 }
 
 pre::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: hsl(var(--border));
   border-radius: 999px;
 }
 
 pre::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: hsl(var(--border-strong));
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  scrollbar-color: hsl(var(--border)) transparent;
 }
 
 nextjs-portal {
   display: none;
+}
+
+.dark .shiki span {
+  color: var(--shiki-dark) !important;
+}
+
+.light .shiki span {
+  color: var(--shiki-light) !important;
+}
+
+.shiki span {
+  color: var(--shiki-dark) !important;
 }

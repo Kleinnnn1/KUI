@@ -8,7 +8,7 @@ export const ToastPreview = () => {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <p className="text-gray-500 text-sm tracking-wide">
+      <p className="text-foreground-muted text-sm tracking-wide">
         Click the buttons below to trigger a toast notification.
       </p>
 
@@ -31,7 +31,7 @@ export const ToastPreview = () => {
           variant="ghost"
           size="sm"
           onClick={() => toast.warning("You are offline.")}
-          className="border-yellow-500/40 text-yellow-400 hover:bg-yellow-500/10 hover:border-yellow-500/60"
+          className="border-warning/40 text-warning-foreground hover:bg-warning-muted hover:border-warning/60"
         >
           Warning
         </Button>
@@ -39,7 +39,7 @@ export const ToastPreview = () => {
           variant="ghost"
           size="sm"
           onClick={() => toast.info("New update available.")}
-          className="border-blue-500/40 text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/60"
+          className="border-primary/30 text-foreground-muted hover:bg-background-muted hover:border-primary/50"
         >
           Info
         </Button>

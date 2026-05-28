@@ -32,48 +32,41 @@ export const badgeRegistry: ComponentEntry = {
   description: "A small label component for status, tags, and categories.",
   preview: (
     <div className="flex flex-col gap-6 items-center justify-center w-full">
-      {/* Variants */}
       <div className="flex flex-wrap gap-3 items-center justify-center">
-        <Badge
-          variant="default"
-          className="rounded-full border-0 bg-white/10 text-white"
-        >
-          Default
-        </Badge>
         <Badge variant="solid" className="rounded-full border-0">
           Solid
         </Badge>
         <Badge
           variant="success"
-          className="rounded-full border-0 bg-green-500/20 text-green-400 flex items-center gap-1.5"
+          className="rounded-full border-0 bg-green-500/20 text-green-600 flex items-center gap-1.5"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
+          <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
           Online
         </Badge>
         <Badge
           variant="danger"
-          className="rounded-full border-0 bg-red-500/20 text-red-400 flex items-center gap-1.5"
+          className="rounded-full border-0 bg-red-500/20 text-red-600 flex items-center gap-1.5"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-red-400 inline-block" />
+          <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
           Offline
         </Badge>
         <Badge
           variant="warning"
-          className="rounded-full border-0 bg-yellow-500/20 text-yellow-400 flex items-center gap-1.5"
+          className="rounded-full border-0 bg-yellow-500/20 text-yellow-600 flex items-center gap-1.5"
         >
           <Clock size={11} />
           Pending
         </Badge>
         <Badge
           variant="default"
-          className="rounded-full border-0 bg-purple-500/20 text-purple-400 flex items-center gap-1.5"
+          className="rounded-full border-0 bg-purple-500/20 text-purple-600 flex items-center gap-1.5"
         >
           <Star size={11} />
           Featured
         </Badge>
         <Badge
           variant="default"
-          className="rounded-full border-0 bg-blue-500/20 text-blue-400 flex items-center gap-1.5"
+          className="rounded-full border-0 bg-blue-500/20 text-blue-600 flex items-center gap-1.5"
         >
           <Bell size={11} />
           Notification

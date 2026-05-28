@@ -14,7 +14,7 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-black flex overflow-x-hidden">
+    <div className="min-h-screen bg-background flex overflow-x-hidden">
       <Sidebar />
       <main className="flex-1 min-w-0 md:ml-64 p-6 md:p-10 pt-16 md:pt-10">
         {children}

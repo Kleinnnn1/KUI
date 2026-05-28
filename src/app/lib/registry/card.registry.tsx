@@ -52,10 +52,10 @@ export const cardRegistry: ComponentEntry = {
     "A container component with header, content, and footer sub-components.",
   preview: (
     <div className="flex flex-wrap gap-4 items-stretch justify-center w-full">
-      <Card className="w-72 flex flex-col">
+      <Card className="w-72 flex flex-col border-border">
         <CardHeader className="flex-1">
-          <CardTitle>Default Card</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-foreground">Default Card</CardTitle>
+          <CardDescription className="text-foreground-muted">
             This is a default card with muted description text.
           </CardDescription>
         </CardHeader>
@@ -66,18 +66,22 @@ export const cardRegistry: ComponentEntry = {
           <Button size="sm">Confirm</Button>
         </CardFooter>
       </Card>
-      <Card variant="elevated" hoverable className="w-72 flex flex-col">
+      <Card
+        variant="elevated"
+        hoverable
+        className="w-72 flex flex-col border-border"
+      >
         <CardHeader className="flex-1">
           <div className="flex items-center gap-2">
-            <CardTitle>Elevated Card</CardTitle>
+            <CardTitle className="text-foreground">Elevated Card</CardTitle>
             <Badge
               variant="default"
-              className="rounded-full border-0 bg-blue-500/20 text-blue-400 flex items-center gap-1.5"
+              className="rounded-full border-0 bg-blue-500/20 text-blue-500 flex items-center gap-1.5"
             >
               <Bell size={10} />3 New
             </Badge>
           </div>
-          <CardDescription>
+          <CardDescription className="text-foreground-muted">
             Hover over this card to see the outline border effect.
           </CardDescription>
         </CardHeader>

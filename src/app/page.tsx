@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Search } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@kennbalino/kui";
 import { Badge } from "@kennbalino/kui";
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
 
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -34,16 +33,16 @@ export default function Home() {
       </div>
 
       <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 pt-24 pb-16">
-        <div className="mb-6 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur text-xs text-gray-400 tracking-widest">
+        <div className="mb-6 px-4 py-1.5 rounded-full border border-border bg-background-muted backdrop-blur text-xs text-foreground-muted tracking-widest">
           REACT · TYPESCRIPT · TAILWIND
         </div>
 
         <h1 className="text-6xl sm:text-7xl font-bold tracking-tight leading-none mb-6">
-          K<span className="text-gray-500">UI</span>
+          K<span className="text-foreground-muted">UI</span>
         </h1>
 
-        <p className="text-gray-400 text-lg sm:text-xl max-w-lg leading-relaxed mb-10">
-          A minimal dark component library built with React, TypeScript, and
+        <p className="text-foreground-muted text-lg sm:text-xl max-w-lg leading-relaxed mb-10">
+          A minimal dark/light component library built with React, TypeScript, and
           Tailwind. Copy. Paste. Ship.
         </p>
 
@@ -74,14 +73,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             <Card variant="elevated" className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <h3 className="text-white font-semibold text-lg mt-2">
+                <h3 className="text-foreground font-semibold text-lg mt-2">
                   Button
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-foreground-muted text-sm leading-relaxed">
                   Multiple variants and sizes with smooth hover transitions.
                 </p>
               </div>
-
               <div className="flex flex-wrap gap-2 mt-auto">
                 <Button variant="solid" size="sm">
                   Solid
@@ -93,7 +91,6 @@ export default function Home() {
                   Danger
                 </Button>
               </div>
-
               <Link href="/docs/button" className="w-full mt-2">
                 <Button variant="ghost" size="sm" className="w-full">
                   View Docs <ArrowRight size={12} className="ml-1" />
@@ -103,19 +100,19 @@ export default function Home() {
 
             <Card variant="elevated" className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <h3 className="text-white font-semibold text-lg mt-2">Badge</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <h3 className="text-foreground font-semibold text-lg mt-2">
+                  Badge
+                </h3>
+                <p className="text-foreground-muted text-sm leading-relaxed">
                   Status labels with semantic color variants for any context.
                 </p>
               </div>
-
               <div className="flex flex-wrap gap-2 mt-auto">
                 <Badge variant="success">Success</Badge>
                 <Badge variant="warning">Warning</Badge>
                 <Badge variant="danger">Danger</Badge>
                 <Badge variant="muted">Muted</Badge>
               </div>
-
               <Link href="/docs/badge" className="w-full mt-2">
                 <Button variant="ghost" size="sm" className="w-full">
                   View Docs <ArrowRight size={12} className="ml-1" />
@@ -125,27 +122,25 @@ export default function Home() {
 
             <Card variant="elevated" className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <h3 className="text-white font-semibold text-lg mt-2">Input</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <h3 className="text-foreground font-semibold text-lg mt-2">
+                  Input
+                </h3>
+                <p className="text-foreground-muted text-sm leading-relaxed">
                   Text inputs with label, hint, error, and icon support.
                 </p>
               </div>
-
               <div className="flex flex-col gap-2 mt-auto">
                 <Input
                   placeholder="Search components..."
                   leftIcon={<Search size={13} />}
                   size="sm"
-                  className="placeholder:text-gray-400"
                 />
                 <Input
                   placeholder="you@example.com"
                   size="sm"
                   error="Invalid email address."
-                  className="placeholder:text-red-400/50"
                 />
               </div>
-
               <Link href="/docs/input" className="w-full mt-2">
                 <Button variant="ghost" size="sm" className="w-full">
                   View Docs <ArrowRight size={12} className="ml-1" />
@@ -156,13 +151,13 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 py-8 text-center">
-        <p className="text-gray-600 text-xs tracking-widest">
+      <footer className="border-t border-border py-8 text-center">
+        <p className="text-foreground-subtle text-xs tracking-widest">
           BUILT BY{" "}
           <Link
             href="https://github.com/Kleinnnn1"
             target="_blank"
-            className="text-gray-400 hover:text-white transition-colors duration-200"
+            className="text-foreground-muted hover:text-foreground transition-colors duration-200"
           >
             KENNETH JHUN BALINO
           </Link>
