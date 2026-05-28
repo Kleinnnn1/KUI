@@ -54,8 +54,8 @@ export const cardRegistry: ComponentEntry = {
     <div className="flex flex-wrap gap-4 items-stretch justify-center w-full">
       <Card className="w-72 flex flex-col border-border">
         <CardHeader className="flex-1">
-          <CardTitle className="text-foreground">Default Card</CardTitle>
-          <CardDescription className="text-foreground-muted">
+          <CardTitle>Default Card</CardTitle>
+          <CardDescription>
             This is a default card with muted description text.
           </CardDescription>
         </CardHeader>
@@ -69,7 +69,7 @@ export const cardRegistry: ComponentEntry = {
       <Card
         variant="elevated"
         hoverable
-        className="w-72 flex flex-col border-border"
+        className="w-72 flex flex-col"
       >
         <CardHeader className="flex-1">
           <div className="flex items-center gap-2">

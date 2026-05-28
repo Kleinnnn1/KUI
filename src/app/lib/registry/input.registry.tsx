@@ -53,38 +53,27 @@ export const inputRegistry: ComponentEntry = {
     "A text input component with label, hint, error, and icon support.",
   preview: (
     <div className="flex flex-col gap-4 w-72">
-      <Input
-        placeholder="Default input"
-        className="placeholder:text-gray-400"
-      />
+      <Input placeholder="Default input" />
       <Input
         label="Email"
         hint="We'll never share your email."
         placeholder="you@example.com"
-        className="placeholder:text-gray-400"
       />
       <Input
         label="Search"
         placeholder="Search components..."
         leftIcon={<Search size={14} />}
-        className="placeholder:text-gray-400"
       />
       <Input
         label="Username"
         placeholder="Enter username"
         error="Username is already taken."
-        className="placeholder:text-red-400/50"
       />
-      <Input
-        variant="success"
-        label="Email"
-        placeholder="you@example.com"
-        className="placeholder:text-gray-400"
-      />
+      <Input variant="success" label="Email" placeholder="you@example.com" />
       <Input
         placeholder="Disabled input"
         disabled
-        className="disabled:opacity-100 disabled:bg-white/2 disabled:text-gray-600 disabled:border-white/5 disabled:placeholder:text-gray-700 disabled:cursor-not-allowed"
+        className="disabled:opacity-100 disabled:bg-background-muted disabled:text-foreground-subtle disabled:border-border disabled:placeholder:text-foreground-subtle/50 disabled:cursor-not-allowed"
       />
     </div>
   ),
